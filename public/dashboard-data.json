@@ -1,7 +1,7 @@
 {
   "account": "@alertatcg",
   "timezone": "America/Cuiaba",
-  "lastSync": "2026-08-10T10:54:03-04:00",
+  "lastSync": "2026-08-10T11:54:19-04:00",
   "stats": {
     "published": 2,
     "ready": 6,
@@ -33,99 +33,99 @@
       "id": "meowth-30th",
       "title": "Quatro cartas de Meowth: artes de dia e noite",
       "kicker": "Pokémon TCG: 30th Celebration",
-      "format": "Carrossel · 7 telas",
+      "format": "Vídeo + 6 fotos · 7 telas",
       "status": "published",
       "sourceName": "Pokémon.com",
       "sourceUrl": "https://www.pokemon.com/us/news/see-meowth-and-alolan-meowth-from-pokemon-tcg-30th-celebration",
       "image": "/meowth-cover.png",
       "scheduleLabel": "Publicado em 10/08",
-      "publishedUrl": "https://www.instagram.com/alertatcg/p/Db3Izc3nAN1/",
-      "note": "Publicado com descrição, hashtags e link para a fonte oficial."
+      "publishedUrl": "https://www.instagram.com/alertatcg/p/Db3W-OVHG3P/",
+      "note": "Republicado com vídeo de abertura, áudio ativo, seis fotos, descrição e hashtags."
     },
     {
       "id": "pikachu-illustrator",
       "title": "Pikachu Illustrator vendido por US$ 16,492 milhões",
       "kicker": "Recorde mundial",
-      "format": "Carrossel · 7 telas",
+      "format": "Vídeo + 6 fotos · 7 telas",
       "status": "published",
       "sourceName": "Guinness World Records",
       "sourceUrl": "https://www.guinnessworldrecords.com/world-records/452634-most-expensive-pokemon-trading-card-sold-at-auction",
       "image": "/pikachu-illustrator-cover.png",
       "scheduleLabel": "Publicado em 10/08 · 10h",
-      "publishedUrl": "https://www.instagram.com/alertatcg/p/Db3OeQ6nCJJ/",
-      "note": "Post confirmado no Instagram com descrição, fonte e hashtags visíveis."
+      "publishedUrl": "https://www.instagram.com/alertatcg/p/Db3X7mVnC8p/",
+      "note": "Republicado com vídeo de abertura, áudio ativo, seis fotos, fonte e hashtags."
     },
     {
       "id": "pikachu-30th",
       "title": "Um entre 30 Pikachus foil em cada booster",
       "kicker": "30th Celebration",
-      "format": "Carrossel · 7 telas",
+      "format": "Vídeo + 6 fotos · 7 telas",
       "status": "ready",
       "sourceName": "Pokémon.com",
       "sourceUrl": "https://www.pokemon.com/us/news/pokemon-tcg-30th-celebration-product-showcase",
       "image": "/pikachu-30th-cover.png",
       "scheduleLabel": "No gatilho",
-      "note": "Curiosidade baseada na divulgação oficial da coleção."
+      "note": "Pacote híbrido pronto: abertura com áudio e seis fotos."
     },
     {
       "id": "pitch-black",
       "title": "Mega Evolution—Pitch Black terá mais de 115 cartas",
       "kicker": "Nova coleção",
-      "format": "Carrossel · 7 telas",
+      "format": "Vídeo + 6 fotos · 7 telas",
       "status": "ready",
       "sourceName": "Pokémon.com",
       "sourceUrl": "https://www.pokemon.com/us/news/the-pokemon-tcg-mega-evolution-pitch-black-expansion-is-available-now",
       "image": "/pitch-black-cover.png",
       "scheduleLabel": "No gatilho",
-      "note": "Criativo, legenda e fontes prontos."
+      "note": "Pacote híbrido pronto: abertura com áudio e seis fotos."
     },
     {
       "id": "etb-comparison",
       "title": "ETB comum x Pokémon Center: 9 e 11 boosters",
       "kicker": "Guia de produto",
-      "format": "Carrossel · 7 telas",
+      "format": "Vídeo + 6 fotos · 7 telas",
       "status": "ready",
       "sourceName": "Pokémon.com",
       "sourceUrl": "https://www.pokemon.com/us/news/pokemon-tcg-30th-celebration-product-showcase",
       "image": "/etb-30th-cover.png",
       "scheduleLabel": "No gatilho",
-      "note": "Criativo, legenda e fontes prontos."
+      "note": "Pacote híbrido pronto: abertura com áudio e seis fotos."
     },
     {
       "id": "upc-30th",
       "title": "Ultra-Premium Collection: 29 boosters + 1 Classic",
       "kicker": "30th Celebration",
-      "format": "Carrossel · 7 telas",
+      "format": "Vídeo + 6 fotos · 7 telas",
       "status": "ready",
       "sourceName": "Pokémon.com",
       "sourceUrl": "https://www.pokemon.com/us/news/pokemon-tcg-30th-celebration-product-showcase",
       "image": "/upc-30th-cover.png",
       "scheduleLabel": "No gatilho",
-      "note": "Criativo, legenda e fontes prontos."
+      "note": "Pacote híbrido pronto: abertura com áudio e seis fotos."
     },
     {
       "id": "worlds-2026",
       "title": "Mundial de 2026 em San Francisco, de 28 a 30 de agosto",
       "kicker": "Play! Pokémon",
-      "format": "Carrossel · 7 telas",
+      "format": "Vídeo + 6 fotos · 7 telas",
       "status": "ready",
       "sourceName": "Pokémon Worlds",
       "sourceUrl": "https://worlds.pokemon.com/en-us",
       "image": "/worlds-2026-cover.png",
       "scheduleLabel": "No gatilho",
-      "note": "Criativo, legenda e fontes prontos."
+      "note": "Pacote híbrido pronto: abertura com áudio e seis fotos."
     },
     {
       "id": "ruler-of-the-skies",
       "title": "Mega Rayquaza ex estreia em Ruler of the Skies",
       "kicker": "Pokémon TCG Pocket",
-      "format": "Carrossel · 7 telas",
+      "format": "Vídeo + 6 fotos · 7 telas",
       "status": "ready",
       "sourceName": "Pokémon.com",
       "sourceUrl": "https://www.pokemon.com/us/news/pokemon-tcg-pocket-ruler-of-the-skies-expansion-coming-soon",
       "image": "/ruler-of-the-skies-cover.png",
       "scheduleLabel": "No gatilho",
-      "note": "Criativo, legenda e fontes prontos."
+      "note": "Pacote híbrido pronto: abertura com áudio e seis fotos."
     },
     {
       "id": "team-skull-pikachu",
