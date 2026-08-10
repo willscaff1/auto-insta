@@ -1,7 +1,7 @@
 {
   "account": "@alertatcg",
   "timezone": "America/Cuiaba",
-  "lastSync": "2026-08-10T12:49:42-04:00",
+  "lastSync": "2026-08-10T13:16:46-04:00",
   "stats": {
     "published": 1,
     "ready": 7,
@@ -39,8 +39,8 @@
       "sourceUrl": "https://www.pokemon.com/us/news/see-meowth-and-alolan-meowth-from-pokemon-tcg-30th-celebration",
       "image": "/meowth-cover.png",
       "scheduleLabel": "Publicado em 10/08",
-      "publishedUrl": "https://www.instagram.com/alertatcg/p/Db3elNIHA6M/",
-      "note": "Publicado com abertura sem fade preto, áudio ativo, seis fotos, descrição, hashtags e capa estática validada na grade."
+      "publishedUrl": "https://www.instagram.com/alertatcg/p/Db3hfryHDte/",
+      "note": "Publicado com 1,2 s de capa clara, carregamento rápido, áudio ativo, seis fotos e capa JPG validada na abertura e na grade."
     },
     {
       "id": "pikachu-illustrator",
