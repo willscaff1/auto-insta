@@ -1,10 +1,10 @@
 {
   "account": "@alertatcg",
   "timezone": "America/Cuiaba",
-  "lastSync": "2026-08-10T11:54:19-04:00",
+  "lastSync": "2026-08-10T12:49:42-04:00",
   "stats": {
-    "published": 2,
-    "ready": 6,
+    "published": 1,
+    "ready": 7,
     "dailyTarget": 2,
     "tracked": 16
   },
@@ -18,13 +18,13 @@
     {
       "time": "10:00",
       "label": "Publicação 1",
-      "detail": "Primeiro carrossel do dia",
+      "detail": "Pausada durante a validação do padrão",
       "type": "publish"
     },
     {
       "time": "19:00",
       "label": "Publicação 2",
-      "detail": "Segundo carrossel do dia",
+      "detail": "Pausada durante a validação do padrão",
       "type": "publish"
     }
   ],
@@ -39,21 +39,21 @@
       "sourceUrl": "https://www.pokemon.com/us/news/see-meowth-and-alolan-meowth-from-pokemon-tcg-30th-celebration",
       "image": "/meowth-cover.png",
       "scheduleLabel": "Publicado em 10/08",
-      "publishedUrl": "https://www.instagram.com/alertatcg/p/Db3W-OVHG3P/",
-      "note": "Republicado com vídeo de abertura, áudio ativo, seis fotos, descrição e hashtags."
+      "publishedUrl": "https://www.instagram.com/alertatcg/p/Db3elNIHA6M/",
+      "note": "Publicado com abertura sem fade preto, áudio ativo, seis fotos, descrição, hashtags e capa estática validada na grade."
     },
     {
       "id": "pikachu-illustrator",
       "title": "Pikachu Illustrator vendido por US$ 16,492 milhões",
       "kicker": "Recorde mundial",
       "format": "Vídeo + 6 fotos · 7 telas",
-      "status": "published",
+      "status": "ready",
       "sourceName": "Guinness World Records",
       "sourceUrl": "https://www.guinnessworldrecords.com/world-records/452634-most-expensive-pokemon-trading-card-sold-at-auction",
       "image": "/pikachu-illustrator-cover.png",
-      "scheduleLabel": "Publicado em 10/08 · 10h",
-      "publishedUrl": "https://www.instagram.com/alertatcg/p/Db3X7mVnC8p/",
-      "note": "Republicado com vídeo de abertura, áudio ativo, seis fotos, fonte e hashtags."
+      "scheduleLabel": "Aguardando validação do padrão",
+      "publishedUrl": null,
+      "note": "Pacote híbrido pronto; publicação antiga removida durante o reinício do perfil."
     },
     {
       "id": "pikachu-30th",
