@@ -70,6 +70,7 @@ export async function upsertContent(item) {
       source_url = EXCLUDED.source_url,
       source_published_at = EXCLUDED.source_published_at,
       media = EXCLUDED.media,
+      origin = EXCLUDED.origin,
       fact_check = EXCLUDED.fact_check,
       updated_at = NOW()
     RETURNING *`,

@@ -2,6 +2,7 @@ import { DateTime } from "luxon";
 import { config, getCredentialState } from "./config.mjs";
 import { getSetting, pool, recordEvent, setSetting } from "./db.mjs";
 import { publishToInstagram } from "./meta.mjs";
+import { validatePromotion } from "./promotions.mjs";
 import { researchOneTopic } from "./research.mjs";
 
 let timer = null;
@@ -75,6 +76,18 @@ async function processOneJob() {
     return true;
   }
 
+  const promotionCheck = await validatePromotion(content);
+  if (!promotionCheck.valid) {
+    await finishJob(job, {
+      status: promotionCheck.retryable ? "retry" : "failed",
+      error: promotionCheck.error,
+      details: promotionCheck,
+      nextAttemptAt: promotionCheck.retryable ? DateTime.now().plus({ minutes: 15 }).toISO() : null,
+    });
+    await recordEvent("warning", "promotion_blocked", `${content.title}: ${promotionCheck.error}`, promotionCheck);
+    return true;
+  }
+
   try {
     const result = await publishToInstagram(job.kind, {
       ...content,
@@ -104,6 +117,7 @@ async function scheduleReadyContent() {
   const ready = await pool.query(
     `SELECT c.* FROM content_items c
      WHERE c.status = 'ready'
+       AND c.origin <> 'promotion'
        AND NOT EXISTS (SELECT 1 FROM publication_jobs j WHERE j.content_id = c.id)
      ORDER BY c.created_at ASC`,
   );
@@ -191,6 +205,33 @@ export function startScheduler() {
   timer = setInterval(schedulerTick, config.schedulerPollMs);
   timer.unref();
   return true;
+}
+
+export async function triggerPromotion(slug) {
+  const result = await pool.query(
+    "SELECT * FROM content_items WHERE slug = $1 AND origin = 'promotion' AND status = 'ready'",
+    [slug],
+  );
+  const content = result.rows[0];
+  if (!content) throw new Error("Promoção pronta não encontrada");
+
+  const validation = await validatePromotion(content);
+  if (!validation.valid) throw new Error(validation.error);
+
+  const scheduled = DateTime.now().toUTC();
+  const job = await pool.query(
+    `INSERT INTO publication_jobs (content_id, kind, scheduled_for)
+     VALUES ($1,'carousel',$2) RETURNING *`,
+    [content.id, scheduled.toISO()],
+  );
+  await pool.query(
+    `INSERT INTO publication_jobs (content_id, kind, scheduled_for)
+     VALUES ($1,'story',$2) ON CONFLICT DO NOTHING`,
+    [content.id, scheduled.plus({ minutes: 10 }).toISO()],
+  );
+  await pool.query("UPDATE content_items SET status = 'scheduled', updated_at = NOW() WHERE id = $1", [content.id]);
+  await recordEvent("info", "promotion_triggered", `Promoção enviada ao gatilho: ${content.title}`, validation);
+  return job.rows[0];
 }
 
 export { scheduleReadyContent };

@@ -27,32 +27,33 @@ export async function seedDatabase() {
       ...item,
       caption,
       media: mediaFor(item.slug),
-      status: "ready",
-      origin: "editorial",
-      factCheck: { verified: true, verifiedAt: "2026-08-10" },
+      status: item.status || "ready",
+      origin: item.origin || "editorial",
+      factCheck: item.factCheck || { verified: true, verifiedAt: "2026-08-10" },
     }));
   }
 
   const jobCount = await pool.query("SELECT COUNT(*)::int AS count FROM publication_jobs");
   if (jobCount.rows[0].count === 0) {
     const start = DateTime.now().setZone(config.timezone).plus({ days: 1 }).startOf("day");
-    for (let index = 0; index < saved.length; index += 1) {
+    const editorial = saved.filter((item) => item.origin !== "promotion");
+    for (let index = 0; index < editorial.length; index += 1) {
       const day = Math.floor(index / 2);
       const kind = index % 2 === 0 ? "carousel" : "reel";
       const scheduled = start.plus({ days: day }).set({ hour: kind === "carousel" ? 10 : 19 });
       await pool.query(
         `INSERT INTO publication_jobs (content_id, kind, scheduled_for)
          VALUES ($1,$2,$3) ON CONFLICT DO NOTHING`,
-        [saved[index].id, kind, scheduled.toUTC().toISO()],
+        [editorial[index].id, kind, scheduled.toUTC().toISO()],
       );
       if (kind === "reel") {
         await pool.query(
           `INSERT INTO publication_jobs (content_id, kind, scheduled_for)
            VALUES ($1,'story',$2) ON CONFLICT DO NOTHING`,
-          [saved[index].id, scheduled.plus({ minutes: 10 }).toUTC().toISO()],
+          [editorial[index].id, scheduled.plus({ minutes: 10 }).toUTC().toISO()],
         );
       }
-      await pool.query("UPDATE content_items SET status = 'scheduled', updated_at = NOW() WHERE id = $1", [saved[index].id]);
+      await pool.query("UPDATE content_items SET status = 'scheduled', updated_at = NOW() WHERE id = $1", [editorial[index].id]);
     }
   }
   await recordEvent("info", "database_seeded", `${saved.length} campanhas carregadas no calendário inicial`);

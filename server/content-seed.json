@@ -78,5 +78,60 @@
     "sourceName": "PSA",
     "sourceUrl": "https://www.psacard.com/cert/24824883/psa",
     "sourcePublishedAt": "2026-08-10"
+  },
+  {
+    "slug": "promo-escuridao-combo",
+    "title": "18 boosters de Escuridão Absoluta por R$ 199,99",
+    "kicker": "Radar de promoções",
+    "sourceName": "Kanto Nerd",
+    "sourceUrl": "https://www.kantonerd.com.br/selados/combo-de-booster-escuridao-absoluta-me5",
+    "sourcePublishedAt": "2026-08-10",
+    "origin": "promotion",
+    "status": "ready",
+    "factCheck": {
+      "verified": true,
+      "verifiedAt": "2026-08-10T16:37:00-04:00",
+      "expiresAt": "2026-08-11T16:37:00-04:00",
+      "expectedPrice": 199.99,
+      "expectedAvailability": "InStock",
+      "publicationPolicy": "manual_trigger_with_live_revalidation"
+    }
+  },
+  {
+    "slug": "promo-caos-combo",
+    "title": "18 boosters de Caos Ascendente por R$ 199,99",
+    "kicker": "Radar de promoções",
+    "sourceName": "Kanto Nerd",
+    "sourceUrl": "https://www.kantonerd.com.br/selados/booster-box-caos-ascendente-me4",
+    "sourcePublishedAt": "2026-08-10",
+    "origin": "promotion",
+    "status": "ready",
+    "factCheck": {
+      "verified": true,
+      "verifiedAt": "2026-08-10T16:37:00-04:00",
+      "expiresAt": "2026-08-11T16:37:00-04:00",
+      "expectedPrice": 199.99,
+      "expectedAvailability": "InStock",
+      "publicationPolicy": "manual_trigger_with_live_revalidation"
+    }
+  },
+  {
+    "slug": "promo-me02-triplo",
+    "title": "Blister Triplo Pokémon ME02 por R$ 39,99",
+    "kicker": "Radar de promoções",
+    "sourceName": "Ri Happy",
+    "sourceUrl": "https://www.rihappy.com.br/jogo-de-cartas-pokemon-me02-blister-triplo-copag/p",
+    "sourcePublishedAt": "2026-08-10",
+    "origin": "promotion",
+    "status": "ready",
+    "factCheck": {
+      "verified": true,
+      "verifiedAt": "2026-08-10T16:37:00-04:00",
+      "expiresAt": "2026-08-11T16:37:00-04:00",
+      "expectedPrice": 39.99,
+      "expectedAvailability": "InStock",
+      "priceValidUntil": "2026-08-31T00:00:00Z",
+      "publicationPolicy": "manual_trigger_with_live_revalidation"
+    }
   }
 ]

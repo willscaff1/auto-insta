@@ -13,7 +13,8 @@ test("serve painel, saúde e dados locais", async () => {
     const html = await fetch(`${base}/`).then((response) => response.text());
     assert.equal(health.ok, true);
     assert.equal(health.service, "alertatcg-ops");
-    assert.equal(dashboard.stats.ready, 10);
+    assert.equal(dashboard.stats.ready, 13);
+    assert.equal(dashboard.readyItems.filter((item) => item.origin === "promotion").length, 3);
     assert.match(html, /AlertaTCG \| Operação 24\/7/);
   } finally {
     await new Promise((resolve) => server.close(resolve));

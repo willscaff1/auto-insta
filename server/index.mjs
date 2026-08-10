@@ -6,7 +6,7 @@ import helmet from "helmet";
 import { config } from "./config.mjs";
 import { buildDashboard } from "./dashboard.mjs";
 import { dbHealth, migrate, pool, recordEvent } from "./db.mjs";
-import { scheduleReadyContent, schedulerTick, startScheduler } from "./scheduler.mjs";
+import { scheduleReadyContent, schedulerTick, startScheduler, triggerPromotion } from "./scheduler.mjs";
 import { seedDatabase } from "./seed.mjs";
 
 const app = express();
@@ -72,6 +72,14 @@ app.post("/api/operations/schedule", requireAdmin, async (_request, response, ne
   try {
     const count = await scheduleReadyContent();
     response.json({ ok: true, count });
+  } catch (error) { next(error); }
+});
+
+app.post("/api/operations/promotions/:slug/trigger", requireAdmin, async (request, response, next) => {
+  try {
+    const job = await triggerPromotion(request.params.slug);
+    await schedulerTick();
+    response.json({ ok: true, job });
   } catch (error) { next(error); }
 });
 
