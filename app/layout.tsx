@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://alertatcg-painel.willscaff.chatgpt.site"),
   title: "Painel de Publicações | AlertaTCG",
   description:
     "Central editorial do AlertaTCG para acompanhar carrosséis, fontes, horários e publicações do Instagram.",
