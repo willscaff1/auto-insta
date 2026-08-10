@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#141517" />
+    <title>AlertaTCG | Operação 24/7</title>
+    <meta name="description" content="Painel operacional de publicações do AlertaTCG." />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="brand">
+          <span class="brand-mark">AT</span>
+          <div><strong>AlertaTCG</strong><span>Operação social</span></div>
+        </div>
+        <nav aria-label="Seções do painel">
+          <button class="nav-item active" data-view="overview"><span>01</span>Visão geral</button>
+          <button class="nav-item" data-view="calendar"><span>02</span>Calendário</button>
+          <button class="nav-item" data-view="queue"><span>03</span>Fila editorial</button>
+          <button class="nav-item" data-view="health"><span>04</span>Operação 24/7</button>
+        </nav>
+        <div class="side-rule">
+          <span>Regra editorial</span>
+          <p>Fato, data e fonte antes de qualquer publicação.</p>
+        </div>
+      </aside>
+
+      <div class="content-shell">
+        <header class="topbar">
+          <button class="mobile-menu" id="mobileMenu" type="button" aria-label="Abrir menu">☰</button>
+          <div class="account-lockup">
+            <span class="status-light" id="serviceLight"></span>
+            <div><strong>@alertatcg</strong><span id="serviceLabel">Carregando operação</span></div>
+          </div>
+          <div class="top-actions">
+            <span class="clock" id="clock"></span>
+            <button class="icon-button" id="refreshButton" type="button" title="Atualizar painel" aria-label="Atualizar painel">↻</button>
+            <a class="instagram-link" href="https://www.instagram.com/alertatcg/" target="_blank" rel="noreferrer">Instagram</a>
+          </div>
+        </header>
+
+        <main>
+          <section class="view active" data-panel="overview">
+            <div class="page-title">
+              <div><p>CONTROLE EDITORIAL</p><h1>Visão geral</h1></div>
+              <div class="sync"><span>Última leitura</span><strong id="lastSync">--</strong></div>
+            </div>
+
+            <div class="metrics" aria-label="Métricas da operação">
+              <article style="--accent:#f3d531"><span>Agendados</span><strong id="scheduledCount">00</strong><small>Feed e Stories</small></article>
+              <article style="--accent:#48c8d8"><span>Conteúdos prontos</span><strong id="readyCount">10</strong><small>Fila mínima</small></article>
+              <article style="--accent:#77d398"><span>Publicados</span><strong id="publishedCount">01</strong><small>Confirmados pela Meta</small></article>
+              <article style="--accent:#f06a5f"><span>Falhas</span><strong id="failedCount">00</strong><small>Com repetição automática</small></article>
+            </div>
+
+            <section class="next-band">
+              <div class="next-time">
+                <p>PRÓXIMA PUBLICAÇÃO</p>
+                <strong id="nextTime">--:--</strong>
+                <span id="nextDate">Aguardando calendário</span>
+              </div>
+              <div class="next-content" id="nextContent">
+                <div class="empty-line">O próximo conteúdo aparecerá aqui.</div>
+              </div>
+            </section>
+
+            <section class="section-block">
+              <div class="section-heading">
+                <div><p>HOJE E AMANHÃ</p><h2>Ritmo da operação</h2></div>
+                <button class="text-command" type="button" data-jump="calendar">Abrir calendário</button>
+              </div>
+              <div class="timeline" id="timeline"></div>
+            </section>
+
+            <section class="section-block preview-block">
+              <div class="section-heading">
+                <div><p>CRIATIVOS</p><h2>Próximos no gatilho</h2></div>
+                <span>1080 × 1350 · 4:5</span>
+              </div>
+              <div class="creative-grid" id="creativeGrid"></div>
+            </section>
+          </section>
+
+          <section class="view" data-panel="calendar">
+            <div class="page-title">
+              <div><p>10H · 19H · 19H10</p><h1>Calendário</h1></div>
+              <div class="sync"><span>Fuso</span><strong>America/Cuiaba</strong></div>
+            </div>
+            <div class="calendar-toolbar">
+              <p>Carrossel pela manhã, Reel à noite e o mesmo vídeo no Story.</p>
+              <div class="legend"><span><i class="dot carousel"></i>Carrossel</span><span><i class="dot reel"></i>Reel</span><span><i class="dot story"></i>Story</span></div>
+            </div>
+            <div class="calendar-list" id="calendarList"></div>
+          </section>
+
+          <section class="view" data-panel="queue">
+            <div class="page-title">
+              <div><p>CONTEÚDO VERIFICADO</p><h1>Fila editorial</h1></div>
+              <div class="sync"><span>Meta mínima</span><strong>10 prontos</strong></div>
+            </div>
+            <div class="filters" id="filters">
+              <button class="active" data-filter="all">Todos</button>
+              <button data-filter="carousel">Carrosséis</button>
+              <button data-filter="reel">Reels</button>
+              <button data-filter="story">Stories</button>
+              <button data-filter="failed">Falhas</button>
+            </div>
+            <div class="queue-list" id="queueList"></div>
+          </section>
+
+          <section class="view" data-panel="health">
+            <div class="page-title">
+              <div><p>RAILWAY + POSTGRESQL + META</p><h1>Operação 24/7</h1></div>
+              <div class="sync"><span>Modo</span><strong id="modeLabel">Simulação</strong></div>
+            </div>
+            <div class="health-grid" id="healthGrid"></div>
+            <section class="section-block">
+              <div class="section-heading"><div><p>REGISTRO</p><h2>Atividade recente</h2></div><span>Últimos 20 eventos</span></div>
+              <div class="event-list" id="eventList"></div>
+            </section>
+          </section>
+        </main>
+      </div>
+    </div>
+
+    <dialog id="accessDialog">
+      <form method="dialog" id="accessForm">
+        <span class="dialog-mark">AT</span>
+        <h2>Acesso ao painel</h2>
+        <p>Informe a chave privada configurada no Railway.</p>
+        <label>Chave de acesso<input id="apiKeyInput" type="password" autocomplete="current-password" required /></label>
+        <p class="form-error" id="formError"></p>
+        <button value="default" type="submit">Entrar</button>
+      </form>
+    </dialog>
+    <script src="/app.js" defer></script>
+  </body>
+</html>
