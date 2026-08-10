@@ -1,0 +1,209 @@
+{
+  "account": "@alertatcg",
+  "timezone": "America/Cuiaba",
+  "lastSync": "2026-08-10T09:57:00-04:00",
+  "stats": {
+    "published": 1,
+    "ready": 2,
+    "dailyTarget": 2,
+    "tracked": 16
+  },
+  "schedule": [
+    {
+      "time": "07:00",
+      "label": "Pesquisa",
+      "detail": "Notícias, leilões e fontes oficiais",
+      "type": "research"
+    },
+    {
+      "time": "10:00",
+      "label": "Publicação 1",
+      "detail": "Primeiro carrossel do dia",
+      "type": "publish"
+    },
+    {
+      "time": "19:00",
+      "label": "Publicação 2",
+      "detail": "Segundo carrossel do dia",
+      "type": "publish"
+    }
+  ],
+  "posts": [
+    {
+      "id": "meowth-30th",
+      "title": "Quatro cartas de Meowth: artes de dia e noite",
+      "kicker": "Pokémon TCG: 30th Celebration",
+      "format": "Carrossel · 7 telas",
+      "status": "published",
+      "sourceName": "Pokémon.com",
+      "sourceUrl": "https://www.pokemon.com/us/news/see-meowth-and-alolan-meowth-from-pokemon-tcg-30th-celebration",
+      "image": "/meowth-cover.png",
+      "scheduleLabel": "Publicado em 10/08",
+      "publishedUrl": "https://www.instagram.com/alertatcg/p/Db3Izc3nAN1/",
+      "note": "Publicado com descrição, hashtags e link para a fonte oficial."
+    },
+    {
+      "id": "pikachu-illustrator",
+      "title": "Pikachu Illustrator vendido por US$ 16,492 milhões",
+      "kicker": "Recorde mundial",
+      "format": "Carrossel · 7 telas",
+      "status": "ready",
+      "sourceName": "Guinness World Records",
+      "sourceUrl": "https://www.guinnessworldrecords.com/",
+      "image": "/pikachu-illustrator-cover.png",
+      "scheduleLabel": "No gatilho",
+      "note": "Valor será publicado com data, condição, nota e contexto da venda."
+    },
+    {
+      "id": "pikachu-30th",
+      "title": "Um entre 30 Pikachus foil em cada booster",
+      "kicker": "30th Celebration",
+      "format": "Carrossel · 7 telas",
+      "status": "ready",
+      "sourceName": "Pokémon.com",
+      "sourceUrl": "https://www.pokemon.com/us/pokemon-news",
+      "image": "/pikachu-30th-cover.png",
+      "scheduleLabel": "No gatilho",
+      "note": "Curiosidade baseada na divulgação oficial da coleção."
+    },
+    {
+      "id": "pitch-black",
+      "title": "Mega Evolution—Pitch Black terá mais de 115 cartas",
+      "kicker": "Nova coleção",
+      "format": "Carrossel planejado",
+      "status": "queued",
+      "sourceName": "Pokémon.com",
+      "sourceUrl": "https://www.pokemon.com/us/pokemon-news",
+      "image": null,
+      "scheduleLabel": "Prioridade alta",
+      "note": ""
+    },
+    {
+      "id": "etb-comparison",
+      "title": "ETB comum x Pokémon Center: 9 e 11 boosters",
+      "kicker": "Guia de produto",
+      "format": "Carrossel planejado",
+      "status": "queued",
+      "sourceName": "Pokémon.com",
+      "sourceUrl": "https://www.pokemon.com/us/pokemon-news",
+      "image": null,
+      "scheduleLabel": "Na sequência",
+      "note": ""
+    },
+    {
+      "id": "upc-30th",
+      "title": "Ultra-Premium Collection: 29 boosters + 1 Classic",
+      "kicker": "30th Celebration",
+      "format": "Carrossel planejado",
+      "status": "queued",
+      "sourceName": "Pokémon.com",
+      "sourceUrl": "https://www.pokemon.com/us/pokemon-news",
+      "image": null,
+      "scheduleLabel": "Na sequência",
+      "note": ""
+    },
+    {
+      "id": "worlds-2026",
+      "title": "Mundial de 2026 em San Francisco, de 28 a 30 de agosto",
+      "kicker": "Play! Pokémon",
+      "format": "Carrossel planejado",
+      "status": "queued",
+      "sourceName": "Pokémon.com",
+      "sourceUrl": "https://www.pokemon.com/us/play-pokemon/pokemon-events/pokemon-tournaments/pokemon-world-championships",
+      "image": null,
+      "scheduleLabel": "Agosto",
+      "note": ""
+    },
+    {
+      "id": "team-skull-pikachu",
+      "title": "Pretend Team Skull Pikachu PSA 10 vendido por US$ 14.050",
+      "kicker": "Venda de julho de 2026",
+      "format": "Carrossel planejado",
+      "status": "queued",
+      "sourceName": "PSA Auction Prices",
+      "sourceUrl": "https://www.psacard.com/auctionprices",
+      "image": null,
+      "scheduleLabel": "Prioridade alta",
+      "note": ""
+    },
+    {
+      "id": "thiago-nigro",
+      "title": "Thiago Nigro e a coleção sequencial de Charizard PSA 1–10",
+      "kicker": "Influenciadores",
+      "format": "Pauta em apuração",
+      "status": "monitoring",
+      "sourceName": "Fonte primária pendente",
+      "sourceUrl": "https://www.instagram.com/thiago.nigro/",
+      "image": null,
+      "scheduleLabel": "Não publicar ainda",
+      "note": ""
+    },
+    {
+      "id": "neymar",
+      "title": "Neymar e Pokémon TCG",
+      "kicker": "Influenciadores",
+      "format": "Monitoramento",
+      "status": "monitoring",
+      "sourceName": "Publicação original pendente",
+      "sourceUrl": "https://www.instagram.com/neymarjr/",
+      "image": null,
+      "scheduleLabel": "Não publicar ainda",
+      "note": ""
+    },
+    {
+      "id": "coringa",
+      "title": "Coringa e Pokémon TCG",
+      "kicker": "Influenciadores",
+      "format": "Monitoramento",
+      "status": "monitoring",
+      "sourceName": "Publicação original pendente",
+      "sourceUrl": "https://www.instagram.com/",
+      "image": null,
+      "scheduleLabel": "Não publicar ainda",
+      "note": ""
+    }
+  ],
+  "sources": [
+    {
+      "group": "Anúncios e regras",
+      "names": "Pokémon.com · Play! Pokémon · The Pokémon Company",
+      "purpose": "Datas, produtos, composição de coleções, eventos e mudanças oficiais.",
+      "level": "primary"
+    },
+    {
+      "group": "Leilões e graduação",
+      "names": "PSA · CGC · Goldin · Heritage Auctions",
+      "purpose": "Histórico de vendas, condição, nota, modalidade e taxas.",
+      "level": "primary"
+    },
+    {
+      "group": "Mercado brasileiro",
+      "names": "Copag · LigaPokemon · MeuDex · DeckLens",
+      "purpose": "Lançamentos locais e contexto de preço, sempre com data da consulta.",
+      "level": "market"
+    },
+    {
+      "group": "Pessoas públicas",
+      "names": "Perfis originais + confirmação independente",
+      "purpose": "Evitar atribuições sem prova e separar fato de repercussão.",
+      "level": "review"
+    }
+  ],
+  "monitoring": [
+    {
+      "name": "Thiago Nigro",
+      "subject": "Sequência de Charizard PSA 1–10",
+      "status": "Checar original"
+    },
+    {
+      "name": "Neymar",
+      "subject": "Relação com Pokémon TCG",
+      "status": "Aguardando fonte"
+    },
+    {
+      "name": "Coringa",
+      "subject": "Relação com Pokémon TCG",
+      "status": "Aguardando fonte"
+    }
+  ]
+}
