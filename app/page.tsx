@@ -284,7 +284,7 @@ export default function Home() {
 
           <div className="source-rule">
             <span>Regra editorial</span>
-            <p>Preço só entra com moeda, data, condição e fonte verificável.</p>
+            <p>Valores aparecem só como contexto editorial; o painel não vende produtos.</p>
           </div>
         </aside>
 
