@@ -5,9 +5,9 @@ import test from "node:test";
 
 const root = path.resolve("server");
 
-test("as treze campanhas têm legenda e pacote híbrido completo", async () => {
+test("as quatorze campanhas têm legenda e pacote híbrido completo", async () => {
   const manifest = JSON.parse(await readFile(path.join(root, "content-seed.json"), "utf8"));
-  assert.equal(manifest.length, 13);
+  assert.equal(manifest.length, 14);
   for (const item of manifest) {
     const media = path.join(root, "public", "media", item.slug);
     await access(path.join(root, "content", "captions", `${item.slug}.txt`));
