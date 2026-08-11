@@ -56,3 +56,7 @@ O Instagram não permite escolher músicas comerciais da biblioteca pelo Graph A
 ## Painel do Sites
 
 O painel privado existente em Sites continua disponível durante a migração. Os comandos `npm run dev` e `npm run build` permanecem reservados para essa versão.
+
+## Campanha atual
+
+Thiago Nigro e o Charizard TAG 10 de US$ 700 mil: publicada em 11/08/2026 e registrada no painel com fontes verificadas, vídeo de abertura, capa JPG e seis imagens.
