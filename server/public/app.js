@@ -78,7 +78,7 @@ function renderCreatives(jobs, readyItems) {
   const combined = [...jobs, ...readyItems.map(readyJob)];
   const unique = [...new Map(combined.map((job) => [job.content.slug, job])).values()].slice(-4).reverse();
   $("#creativeGrid").innerHTML = unique.map((job) => `
-    <article class="creative-card"><img src="${esc(cover(job))}" alt="Capa de ${esc(job.content.title)}"><div class="creative-copy"><p class="kicker">${esc(job.content.kicker)}</p><h3>${esc(job.content.title)}</h3><div class="creative-meta"><span>${job.content.origin === "promotion" ? "Promoção" : kindLabels[job.kind]}</span><span>${job.scheduledFor ? formatDate(job.scheduledFor, { day: "2-digit", month: "short" }) : "Pronto"}</span></div></div></article>`).join("");
+    <article class="creative-card"><img src="${esc(cover(job))}" alt="Capa de ${esc(job.content.title)}"><div class="creative-copy"><p class="kicker">${esc(job.content.kicker)}</p><h3>${esc(job.content.title)}</h3><div class="creative-meta"><span>${kindLabels[job.kind]}</span><span>${job.scheduledFor ? formatDate(job.scheduledFor, { day: "2-digit", month: "short" }) : "Pronto"}</span></div></div></article>`).join("");
 }
 
 function renderCalendar(jobs) {
@@ -94,12 +94,11 @@ function renderCalendar(jobs) {
   }).join("") || '<p class="empty-line">O calendário será preenchido ao conectar o banco.</p>';
 }
 
-function renderQueue(jobs, readyItems = [], runtime = state.data.runtime) {
+function renderQueue(jobs, readyItems = []) {
   const combined = [...readyItems.map(readyJob), ...jobs];
-  const filtered = combined.filter((job) => state.filter === "all" || job.kind === state.filter || job.status === state.filter || (state.filter === "promotion" && job.content.origin === "promotion"));
-  const canPublish = runtime?.publishingMode === "live" && runtime?.database?.connected && runtime?.credentials?.meta && runtime?.credentials?.publicUrl;
+  const filtered = combined.filter((job) => state.filter === "all" || job.kind === state.filter || job.status === state.filter);
   $("#queueList").innerHTML = filtered.map((job, index) => `
-    <article class="queue-row"><span class="queue-index">${String(index + 1).padStart(2, "0")}</span><img class="queue-thumb" src="${esc(cover(job))}" alt=""><div class="queue-copy"><p class="kicker">${esc(job.content.kicker)}</p><h3>${esc(job.content.title)}</h3><p>${esc(job.content.sourceName)}</p></div><div class="job-schedule"><strong>${job.scheduledFor ? formatDate(job.scheduledFor, { hour: "2-digit", minute: "2-digit" }) : "NO GATILHO"}</strong><span>${job.scheduledFor ? `${formatDate(job.scheduledFor, { day: "2-digit", month: "short" })} · ${kindLabels[job.kind]}` : "Carrossel pronto"}</span></div>${job.status === "ready" && job.content.origin === "promotion" ? `<button class="promo-trigger" type="button" data-promo="${esc(job.content.slug)}" ${canPublish ? "" : "disabled"} title="${canPublish ? "Revalidar e publicar" : "Conecte banco, endereço público e Meta para liberar"}">Publicar agora</button>` : `<span class="status-badge ${job.status}">${statusLabels[job.status] || job.status}</span>`}</article>`).join("") || '<p class="empty-line">Nenhuma publicação neste filtro.</p>';
+    <article class="queue-row"><span class="queue-index">${String(index + 1).padStart(2, "0")}</span><img class="queue-thumb" src="${esc(cover(job))}" alt=""><div class="queue-copy"><p class="kicker">${esc(job.content.kicker)}</p><h3>${esc(job.content.title)}</h3><p>${esc(job.content.sourceName)}</p></div><div class="job-schedule"><strong>${job.scheduledFor ? formatDate(job.scheduledFor, { hour: "2-digit", minute: "2-digit" }) : "NO GATILHO"}</strong><span>${job.scheduledFor ? `${formatDate(job.scheduledFor, { day: "2-digit", month: "short" })} · ${kindLabels[job.kind]}` : "Carrossel pronto"}</span></div><span class="status-badge ${job.status}">${statusLabels[job.status] || job.status}</span></article>`).join("") || '<p class="empty-line">Nenhuma publicação neste filtro.</p>';
 }
 
 function renderHealth(runtime) {
@@ -128,23 +127,7 @@ $$('.nav-item').forEach((button) => button.addEventListener('click', () => switc
 $$('[data-jump]').forEach((button) => button.addEventListener('click', () => switchView(button.dataset.jump)));
 $("#mobileMenu").addEventListener("click", () => $(".sidebar").classList.toggle("open"));
 $("#refreshButton").addEventListener("click", () => loadData());
-$("#filters").addEventListener("click", (event) => { if (!event.target.dataset.filter) return; $$("#filters button").forEach((button) => button.classList.toggle("active", button === event.target)); state.filter = event.target.dataset.filter; renderQueue(state.data.jobs, state.data.readyItems, state.data.runtime); });
-$("#queueList").addEventListener("click", async (event) => {
-  const slug = event.target.dataset.promo;
-  if (!slug) return;
-  event.target.disabled = true;
-  event.target.textContent = "Verificando...";
-  try {
-    const response = await fetch(`/api/operations/promotions/${encodeURIComponent(slug)}/trigger`, { method: "POST", headers: headers() });
-    const result = await response.json();
-    if (!response.ok) throw new Error(result.error || "Não foi possível publicar");
-    await loadData(false);
-  } catch (error) {
-    event.target.disabled = false;
-    event.target.textContent = "Tentar novamente";
-    event.target.title = error.message;
-  }
-});
+$("#filters").addEventListener("click", (event) => { if (!event.target.dataset.filter) return; $$("#filters button").forEach((button) => button.classList.toggle("active", button === event.target)); state.filter = event.target.dataset.filter; renderQueue(state.data.jobs, state.data.readyItems); });
 $("#accessForm").addEventListener("submit", async (event) => { event.preventDefault(); state.apiKey = $("#apiKeyInput").value.trim(); if (await loadData(false)) { sessionStorage.setItem("alertatcg-key", state.apiKey); $("#accessDialog").close(); $("#formError").textContent = ""; } else { $("#formError").textContent = "Chave incorreta."; } });
 
 function updateClock() { $("#clock").textContent = `${formatDate(new Date(), { weekday: "short", day: "2-digit", month: "short" })} · ${formatDate(new Date(), { hour: "2-digit", minute: "2-digit" })}`; }
