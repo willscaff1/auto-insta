@@ -28,7 +28,7 @@ function mediaFor(slug) {
 
 async function seedContent() {
   const manifest = JSON.parse(await readFile(new URL("./content-seed.json", import.meta.url), "utf8"));
-  return manifest.map((item) => ({
+  return manifest.filter((item) => item.origin !== "promotion").map((item) => ({
     id: item.slug,
     ...item,
     caption: "",
@@ -60,6 +60,7 @@ export async function buildDashboard() {
       `SELECT j.*, c.title, c.kicker, c.slug, c.media, c.source_name, c.source_url,
               c.caption, c.status AS content_status, c.origin
        FROM publication_jobs j JOIN content_items c ON c.id = j.content_id
+       WHERE c.origin <> 'promotion'
        ORDER BY j.scheduled_for ASC LIMIT 80`,
     ),
     pool.query(
@@ -68,11 +69,12 @@ export async function buildDashboard() {
         COUNT(*) FILTER (WHERE status IN ('scheduled','retry','waiting_credentials'))::int AS scheduled,
         COUNT(*) FILTER (WHERE status = 'failed')::int AS failed,
         COUNT(*) FILTER (WHERE kind = 'story' AND status = 'published')::int AS stories
-       FROM publication_jobs`,
+       FROM publication_jobs j JOIN content_items c ON c.id = j.content_id
+       WHERE c.origin <> 'promotion'`,
     ),
-    pool.query("SELECT COUNT(*) FILTER (WHERE status IN ('ready','scheduled'))::int AS ready FROM content_items"),
-    pool.query("SELECT * FROM content_items WHERE status = 'ready' ORDER BY created_at ASC LIMIT 80"),
-    pool.query("SELECT * FROM operation_events ORDER BY created_at DESC LIMIT 20"),
+    pool.query("SELECT COUNT(*) FILTER (WHERE status IN ('ready','scheduled'))::int AS ready FROM content_items WHERE origin <> 'promotion'"),
+    pool.query("SELECT * FROM content_items WHERE status = 'ready' AND origin <> 'promotion' ORDER BY created_at ASC LIMIT 80"),
+    pool.query("SELECT * FROM operation_events WHERE event_type NOT LIKE 'promotion_%' ORDER BY created_at DESC LIMIT 20"),
   ]);
   const stat = stats.rows[0];
   return {
