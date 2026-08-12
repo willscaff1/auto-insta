@@ -1,12 +1,13 @@
 {
   "account": "@alertatcg",
   "timezone": "America/Cuiaba",
-  "lastSync": "2026-08-10T13:16:46-04:00",
+  "lastSync": "2026-08-11T19:50:00-04:00",
   "stats": {
-    "published": 1,
-    "ready": 7,
+    "published": 14,
+    "tiktokPublished": 12,
+    "ready": 5,
     "dailyTarget": 2,
-    "tracked": 16
+    "tracked": 26
   },
   "schedule": [
     {
@@ -18,17 +19,225 @@
     {
       "time": "10:00",
       "label": "Publicação 1",
-      "detail": "Pausada durante a validação do padrão",
+      "detail": "Fila ativa com apuração validada",
       "type": "publish"
     },
     {
       "time": "19:00",
       "label": "Publicação 2",
-      "detail": "Pausada durante a validação do padrão",
+      "detail": "Fila ativa com apuração validada",
       "type": "publish"
     }
   ],
   "posts": [
+    {
+      "id": "grupo-promocoes-carrossel-v5",
+      "title": "Ofertas desejadas: 151, Herois Excelsos e Fogo Fantasmagorico",
+      "kicker": "Criativo persuasivo com precos verificados em 11/08/2026 as 16:52",
+      "format": "7 imagens estaticas 4:5 + 3 Stories 9:16",
+      "status": "ready_review",
+      "sourceName": "Mercado Livre",
+      "sourceUrl": "https://www.mercadolivre.com.br/pokemon-display-booster-box-fogo-fantasmagorico-36-und/up/MLBU3964660966",
+      "image": "/grupo-promocoes-v5-cover.jpg",
+      "scheduleLabel": "Pronto para revisar antes de publicar",
+      "note": "Nova versao focada no beneficio do grupo: colecoes desejadas na capa, preco grande, economia real, urgencia conferida e CTA do WhatsApp. Pokemon 151 aparece como monitoramento, nao como promocao, porque o preco atual esta alto. Nenhuma publicacao ou campanha nova foi criada.",
+      "destinationUrl": "https://alertatcg.promos.app.br/r/grupos"
+    },
+    {
+      "id": "grupo-promocoes-carrossel-v4",
+      "title": "Cinco ofertas atuais de Pokemon TCG",
+      "kicker": "Mercado Livre verificado em 11/08/2026 as 16:12",
+      "format": "7 imagens estaticas 4:5",
+      "status": "published",
+      "sourceName": "Mercado Livre",
+      "sourceUrl": "https://www.mercadolivre.com.br/pokemon-tcg-box-mega-greninja-ex-colecao-original-copag-portugues/p/MLB75010637",
+      "image": "/grupo-promocoes-v4-cover.jpg",
+      "scheduleLabel": "Publicado em 11/08 - 16:21",
+      "publishedAt": "2026-08-11T16:21:00-04:00",
+      "publishedUrl": "https://www.instagram.com/alertatcg/p/Db6cRiWmnt9/",
+      "tiktokUrl": "https://www.tiktok.com/@alertatcg/video/7672889269484064021",
+      "note": "Cinco ofertas conferidas no mesmo dia, com precos, condicoes e aviso de variacao. Campanha em analise para levar interessados ao grupo; gasto inicial R$0,00.",
+      "promotion": {
+        "status": "in_review",
+        "submittedAt": "2026-08-11T16:26:00-04:00",
+        "dailyBudgetBRL": 20,
+        "durationDays": 3,
+        "mediaBudgetBRL": 60,
+        "estimatedTaxesBRL": 8.29,
+        "estimatedTotalBRL": 68.29,
+        "estimatedImpressions": "8057-14963",
+        "estimatedWebsiteVisits": 282,
+        "audience": "Compradores Pokemon TCG | BR | 18-44",
+        "targeting": {
+          "advantagePlus": false,
+          "location": "Brasil",
+          "ageMin": 18,
+          "ageMax": 44,
+          "gender": "todos",
+          "interests": [
+            "Pokemon Trading Card Game",
+            "Jogo de cartas colecionaveis"
+          ]
+        },
+        "objective": "website_click",
+        "destinationUrl": "https://alertatcg.promos.app.br/r/grupos",
+        "spentBRL": 0,
+        "funding": "saldo_pre_pago",
+        "fallbackCardAllowed": false
+      }
+    },
+    {
+      "id": "grupo-promocoes-carrossel-v3",
+      "title": "Grupo de promocoes Pokemon TCG",
+      "kicker": "Carrossel com link visivel e quatro produtos",
+      "format": "6 imagens estaticas 4:5",
+      "status": "deletion_pending_platform",
+      "sourceName": "Pokemon.com + Mercado Livre",
+      "sourceUrl": "https://www.pokemon.com/br/destaques/arte-da-expansao-megaevolucao-herois-excelsos-do-pokemon-estampas-ilustradas",
+      "image": "/grupo-promocoes-v3-cover.jpg",
+      "scheduleLabel": "Publicado em 11/08 - 15:35",
+      "publishedAt": "2026-08-11T15:35:40-04:00",
+      "publishedUrl": "https://www.instagram.com/alertatcg/p/Db6WK9HGga7/",
+      "note": "A campanha foi encerrada e sua configuracao excluida com gasto R$0,00. O Instagram ainda bloqueia a exclusao do post; novas tentativas estao programadas.",
+      "promotion": {
+        "status": "ended",
+        "submittedAt": "2026-08-11T15:54:00-04:00",
+        "activatedAt": "2026-08-11T16:04:00-04:00",
+        "endedAt": "2026-08-11T16:16:00-04:00",
+        "configurationDeletedAt": "2026-08-11T16:17:00-04:00",
+        "postDeletionLastAttemptAt": "2026-08-11T16:28:00-04:00",
+        "dailyBudgetBRL": 20,
+        "durationDays": 3,
+        "mediaBudgetBRL": 60,
+        "estimatedTaxesBRL": 8.29,
+        "estimatedTotalBRL": 68.29,
+        "estimatedImpressions": "8057-14963",
+        "estimatedWebsiteVisits": 282,
+        "audience": "Compradores Pokemon TCG | BR | 18-44",
+        "targeting": {
+          "advantagePlus": false,
+          "location": "Brasil",
+          "ageMin": 18,
+          "ageMax": 44,
+          "gender": "todos",
+          "interests": [
+            "Pokémon Trading Card Game",
+            "Jogo de cartas colecionáveis"
+          ]
+        },
+        "objective": "website_click",
+        "destinationUrl": "https://alertatcg.promos.app.br/r/grupos",
+        "spentBRL": 0,
+        "replacedPreviousCampaign": {
+          "audience": "Pokemon TCG Brasil | Advantage+",
+          "endedAt": "2026-08-11T15:58:00-04:00",
+          "spentBRL": 0
+        }
+      }
+    },
+    {
+      "id": "grupo-promocoes-reel-v3",
+      "title": "Reel do Grupo #07 no WhatsApp",
+      "kicker": "Boxes, boosters e alertas de preco",
+      "format": "Reel 9:16 com audio original - 15 segundos",
+      "status": "published",
+      "sourceName": "Pokemon.com + Mercado Livre",
+      "sourceUrl": "https://www.pokemon.com/br/destaques/arte-da-expansao-megaevolucao-herois-excelsos-do-pokemon-estampas-ilustradas",
+      "image": "/grupo-promocoes-v3-reel-cover.jpg",
+      "scheduleLabel": "Publicado em 11/08 - 15:37",
+      "publishedAt": "2026-08-11T15:37:33-04:00",
+      "publishedUrl": "https://www.instagram.com/alertatcg/reel/Db6Wxc4xqIV/",
+      "tiktokUrl": "https://www.tiktok.com/@alertatcg/video/7672924289951124756",
+      "note": "Capa colorida, audio original, legenda e hashtags confirmados. Tres telas de Story estao prontas; o Instagram Web nao oferece publicacao de Story e o Railway ainda aguarda META_IG_USER_ID e META_ACCESS_TOKEN."
+    },
+    {
+      "id": "quanto-vale-charizard-celebrations-psa10",
+      "title": "Quanto vale o Charizard de Celebrations PSA 10?",
+      "kicker": "5 vendas confirmadas em 10/08/2026",
+      "format": "7 vídeos 4:5 com áudio contínuo",
+      "status": "ready",
+      "sourceName": "PSA + Banco Central do Brasil",
+      "sourceUrl": "https://www.psacard.com/cert/96701177/psa",
+      "image": "/charizard-celebrations-psa10-cover.jpg",
+      "scheduleLabel": "Pronto para a próxima janela editorial",
+      "note": "Cinco vendas da véspera entre US$ 485 e US$ 584,97; formatos de venda, população e estimativa identificados separadamente."
+    },
+    {
+      "id": "quanto-vale-dedenne-093-psa10",
+      "title": "Quanto vale a Dedenne #093 PSA 10?",
+      "kicker": "5 vendas comparáveis de julho de 2026",
+      "format": "7 vídeos 4:5 com áudio contínuo",
+      "status": "ready",
+      "sourceName": "PSA + Banco Central do Brasil",
+      "sourceUrl": "https://www.psacard.com/cert/160255889/psa",
+      "image": "/dedenne-psa10-cover.jpg",
+      "scheduleLabel": "Pronto para a próxima janela editorial",
+      "note": "Faixa verificada de US$ 105,60 a US$ 150 para PSA 10; conversão em reais identificada como ilustrativa e sem frete, impostos ou taxas."
+    },
+    {
+      "id": "pull-pokerev-rapidash",
+      "title": "PokeRev tira Rapidash holo de Triumphant",
+      "kicker": "Pull + contexto",
+      "format": "Reel comentado de 15 a 20 segundos",
+      "status": "monitoring",
+      "sourceName": "PokeRev + PSA Price Guide",
+      "sourceUrl": "https://www.youtube.com/watch?v=qFseh5X1beQ",
+      "image": null,
+      "scheduleLabel": "Aguardando Remix ou autorização",
+      "note": "Trecho 25:48–25:58 verificado. Não baixar nem republicar o vídeo do YouTube; usar Remix nativo ou arquivo autorizado, com crédito visível."
+    },
+    {
+      "id": "grupo-promocoes-reel",
+      "title": "Grupo de promocoes AlertaTCG",
+      "kicker": "Captacao de seguidores e mensagens",
+      "format": "Reel 9:16 com musica original - 12 segundos",
+      "status": "published",
+      "sourceName": "Pokemon.com - imagens oficiais",
+      "sourceUrl": "https://www.pokemon.com/us/news/pokemon-tcg-30th-celebration-product-showcase",
+      "image": "/grupo-promocoes-cover.jpg",
+      "scheduleLabel": "Publicado em 11/08 - 13:08",
+      "publishedAt": "2026-08-11T13:08:00-04:00",
+      "publishedUrl": "https://www.instagram.com/alertatcg/reel/Db6FhPfRHh9/",
+      "tiktokUrl": "https://www.tiktok.com/@alertatcg/video/7672924939418111252",
+      "note": "Primeira versao mantida no perfil. A campanha esta pausada por solicitacao do usuario, com gasto R$0,00.",
+      "promotion": {
+        "status": "paused",
+        "submittedAt": "2026-08-11T13:12:00-04:00",
+        "pausedAt": "2026-08-11T14:18:00-04:00",
+        "spentBRL": 0,
+        "replacedBy": "https://www.instagram.com/alertatcg/reel/Db6PCo1RRn2/",
+        "dailyBudgetBRL": 20,
+        "durationDays": 3,
+        "estimatedTotalBRL": 68.29,
+        "estimatedImpressions": "8076-14999"
+      }
+    },
+    {
+      "id": "grupo-promocoes-herois-excelsos-v2",
+      "title": "Ofertas de Herois Excelsos no grupo AlertaTCG",
+      "kicker": "Precos verificados em 11/08/2026",
+      "format": "Reel 9:16 com 4 cenas e musica original - 15 segundos",
+      "status": "deleted",
+      "sourceName": "Pokemon.com + Mercado Livre",
+      "sourceUrl": "https://www.pokemon.com/br/destaques/arte-da-expansao-megaevolucao-herois-excelsos-do-pokemon-estampas-ilustradas",
+      "image": "/grupo-promocoes-v2-cover.jpg",
+      "scheduleLabel": "Excluido em 11/08 - 15:18",
+      "publishedAt": "2026-08-11T14:34:03-04:00",
+      "publishedUrl": "https://www.instagram.com/alertatcg/reel/Db6PCo1RRn2/",
+      "note": "Reel excluido do perfil por solicitacao do usuario. A campanha foi encerrada sem gasto antes da exclusao.",
+      "promotion": {
+        "status": "ended",
+        "submittedAt": "2026-08-11T14:38:00-04:00",
+        "pausedAt": "2026-08-11T14:59:31-04:00",
+        "endedAt": "2026-08-11T15:08:00-04:00",
+        "postDeletedAt": "2026-08-11T15:18:00-04:00",
+        "dailyBudgetBRL": 20,
+        "durationDays": 3,
+        "estimatedTotalBRL": 68.29,
+        "estimatedImpressions": "8076-14999",
+        "spentBRL": 0
+      }
+    },
     {
       "id": "meowth-30th",
       "title": "Quatro cartas de Meowth: artes de dia e noite",
@@ -40,6 +249,7 @@
       "image": "/meowth-cover.png",
       "scheduleLabel": "Publicado em 10/08",
       "publishedUrl": "https://www.instagram.com/alertatcg/p/Db3hfryHDte/",
+      "tiktokUrl": "https://www.tiktok.com/@alertatcg/video/7672891041480985877",
       "note": "Publicado com 1,2 s de capa clara, carregamento rápido, áudio ativo, seis fotos e capa JPG validada na abertura e na grade."
     },
     {
@@ -47,85 +257,137 @@
       "title": "Pikachu Illustrator vendido por US$ 16,492 milhões",
       "kicker": "Recorde mundial",
       "format": "Vídeo + 6 fotos · 7 telas",
-      "status": "ready",
+      "status": "needs_republish",
       "sourceName": "Guinness World Records",
       "sourceUrl": "https://www.guinnessworldrecords.com/world-records/452634-most-expensive-pokemon-trading-card-sold-at-auction",
       "image": "/pikachu-illustrator-cover.png",
-      "scheduleLabel": "Aguardando validação do padrão",
-      "publishedUrl": null,
-      "note": "Pacote híbrido pronto; publicação antiga removida durante o reinício do perfil."
+      "scheduleLabel": "Indisponível no perfil - republicação pendente",
+      "publishedUrl": "https://www.instagram.com/alertatcg/p/Db3X7mVnC8p/",
+      "note": "O link histórico não abre e o post não aparece mais na grade. Republicar o pacote validado antes de qualquer impulsionamento."
     },
     {
       "id": "pikachu-30th",
       "title": "Um entre 30 Pikachus foil em cada booster",
       "kicker": "30th Celebration",
       "format": "Vídeo + 6 fotos · 7 telas",
-      "status": "ready",
+      "status": "published",
       "sourceName": "Pokémon.com",
       "sourceUrl": "https://www.pokemon.com/us/news/pokemon-tcg-30th-celebration-product-showcase",
       "image": "/pikachu-30th-cover.png",
-      "scheduleLabel": "No gatilho",
-      "note": "Pacote híbrido pronto: abertura com áudio e seis fotos."
+      "scheduleLabel": "Publicado em 10/08",
+      "publishedUrl": "https://www.instagram.com/alertatcg/p/Db4A8zWGnrS/",
+      "tiktokUrl": "https://www.tiktok.com/@alertatcg/video/7672892533034339604",
+      "note": "Publicado com vídeo de abertura, áudio, seis fotos e capa selecionada."
     },
     {
       "id": "pitch-black",
       "title": "Mega Evolution—Pitch Black terá mais de 115 cartas",
       "kicker": "Nova coleção",
-      "format": "Vídeo + 6 fotos · 7 telas",
-      "status": "ready",
+      "format": "7 vídeos com áudio · 7 telas",
+      "status": "published",
       "sourceName": "Pokémon.com",
       "sourceUrl": "https://www.pokemon.com/us/news/the-pokemon-tcg-mega-evolution-pitch-black-expansion-is-available-now",
       "image": "/pitch-black-cover.png",
-      "scheduleLabel": "No gatilho",
-      "note": "Pacote híbrido pronto: abertura com áudio e seis fotos."
+      "scheduleLabel": "Publicado em 11/08 · 09:28",
+      "publishedAt": "2026-08-11T09:28:00-04:00",
+      "publishedUrl": "https://www.instagram.com/alertatcg/p/Db5sg0hnNiz/",
+      "tiktokUrl": "https://www.tiktok.com/@alertatcg/video/7672893100137794837",
+      "note": "Áudio confirmado nas sete mídias; legenda nativa, fonte e hashtags visíveis."
     },
     {
       "id": "etb-comparison",
       "title": "ETB comum x Pokémon Center: 9 e 11 boosters",
       "kicker": "Guia de produto",
-      "format": "Vídeo + 6 fotos · 7 telas",
-      "status": "ready",
+      "format": "7 vídeos com áudio · 7 telas",
+      "status": "published",
       "sourceName": "Pokémon.com",
       "sourceUrl": "https://www.pokemon.com/us/news/pokemon-tcg-30th-celebration-product-showcase",
       "image": "/etb-30th-cover.png",
-      "scheduleLabel": "No gatilho",
-      "note": "Pacote híbrido pronto: abertura com áudio e seis fotos."
+      "scheduleLabel": "Publicado em 11/08 · 09:49",
+      "publishedAt": "2026-08-11T09:49:00-04:00",
+      "publishedUrl": "https://www.instagram.com/alertatcg/p/Db5u8sEnAFt/",
+      "tiktokUrl": "https://www.tiktok.com/@alertatcg/video/7672893430757870868",
+      "note": "Áudio confirmado nas sete mídias; legenda nativa, fonte e hashtags visíveis."
     },
     {
       "id": "upc-30th",
       "title": "Ultra-Premium Collection: 29 boosters + 1 Classic",
       "kicker": "30th Celebration",
-      "format": "Vídeo + 6 fotos · 7 telas",
-      "status": "ready",
+      "format": "7 vídeos com áudio · 7 telas",
+      "status": "published",
       "sourceName": "Pokémon.com",
       "sourceUrl": "https://www.pokemon.com/us/news/pokemon-tcg-30th-celebration-product-showcase",
       "image": "/upc-30th-cover.png",
-      "scheduleLabel": "No gatilho",
-      "note": "Pacote híbrido pronto: abertura com áudio e seis fotos."
+      "scheduleLabel": "Publicado em 11/08 · 10:01",
+      "publishedAt": "2026-08-11T10:01:00-04:00",
+      "publishedUrl": "https://www.instagram.com/alertatcg/p/Db5wRa3nPB6/",
+      "tiktokUrl": "https://www.tiktok.com/@alertatcg/video/7672893936276426004",
+      "note": "Áudio confirmado nas sete mídias; descrição completa, fonte e hashtags no primeiro comentário."
     },
     {
       "id": "worlds-2026",
       "title": "Mundial de 2026 em San Francisco, de 28 a 30 de agosto",
       "kicker": "Play! Pokémon",
-      "format": "Vídeo + 6 fotos · 7 telas",
-      "status": "ready",
+      "format": "7 vídeos com áudio · 7 telas",
+      "status": "published",
       "sourceName": "Pokémon Worlds",
       "sourceUrl": "https://worlds.pokemon.com/en-us",
       "image": "/worlds-2026-cover.png",
-      "scheduleLabel": "No gatilho",
-      "note": "Pacote híbrido pronto: abertura com áudio e seis fotos."
+      "scheduleLabel": "Publicado em 11/08 · 10:14",
+      "publishedAt": "2026-08-11T10:14:00-04:00",
+      "publishedUrl": "https://www.instagram.com/alertatcg/p/Db5xtSBnFIm/",
+      "tiktokUrl": "https://www.tiktok.com/@alertatcg/video/7672894419518885140",
+      "note": "Legenda nativa, fonte e hashtags confirmadas; processamento de vídeo acompanhado no Instagram."
+    },
+    {
+      "id": "psa-worlds-2026",
+      "title": "PSA receberá submissões no Pokémon Worlds 2026",
+      "kicker": "Notícia atual • verificada em 11/08",
+      "format": "7 vídeos com áudio • 7 telas",
+      "status": "published",
+      "sourceName": "PSA",
+      "sourceUrl": "https://www.psacard.com/articles/articleview/15250/psa-pokemon-worlds-from-august-28-30",
+      "image": "/psa-worlds-2026-cover.jpg",
+      "scheduleLabel": "Publicado em 11/08 • 11:19",
+      "publishedAt": "2026-08-11T11:19:00-04:00",
+      "publishedUrl": "https://www.instagram.com/alertatcg/p/Db55NhqHBH1/",
+      "tiktokUrl": "https://www.tiktok.com/@alertatcg/video/7672912819087592725",
+      "note": "Fonte oficial consultada no dia; legenda, hashtags e audio confirmados nas sete midias. Campanha pausada por solicitacao do usuario.",
+      "promotion": {
+        "status": "paused",
+        "pausedAt": "2026-08-11T14:59:31-04:00",
+        "submittedAt": "2026-08-11T13:53:00-04:00",
+        "dailyBudgetBRL": 20,
+        "durationDays": 1,
+        "estimatedTotalBRL": 22.76,
+        "estimatedImpressions": "2384-4692"
+      }
     },
     {
       "id": "ruler-of-the-skies",
       "title": "Mega Rayquaza ex estreia em Ruler of the Skies",
       "kicker": "Pokémon TCG Pocket",
-      "format": "Vídeo + 6 fotos · 7 telas",
-      "status": "ready",
+      "format": "7 vídeos com áudio · 7 telas",
+      "status": "review",
       "sourceName": "Pokémon.com",
       "sourceUrl": "https://www.pokemon.com/us/news/pokemon-tcg-pocket-ruler-of-the-skies-expansion-coming-soon",
       "image": "/ruler-of-the-skies-cover.png",
-      "scheduleLabel": "No gatilho",
-      "note": "Pacote híbrido pronto: abertura com áudio e seis fotos."
+      "scheduleLabel": "Atualizar antes de publicar",
+      "note": "O anúncio original é de 23/07. Só publicar após reenquadrar para um evento ativo e reverificar a fonte no mesmo dia."
+    },
+    {
+      "id": "psa-grading-guide",
+      "title": "O que uma carta precisa para receber PSA 10?",
+      "kicker": "Guia de graduação",
+      "format": "Vídeo + 6 fotos · 7 telas",
+      "status": "published",
+      "sourceName": "PSA",
+      "sourceUrl": "https://www.psacard.com/gradingstandards",
+      "image": "/psa-grading-guide-cover.jpg",
+      "scheduleLabel": "Publicado em 10/08",
+      "publishedUrl": "https://www.instagram.com/alertatcg/p/Db4HVNjGhzx/",
+      "tiktokUrl": "https://www.tiktok.com/@alertatcg/video/7672913000222723349",
+      "note": "Conteúdo educativo sobre critérios de graduação; nota não é promessa de preço."
     },
     {
       "id": "team-skull-pikachu",
@@ -141,15 +403,26 @@
     },
     {
       "id": "thiago-nigro",
-      "title": "Thiago Nigro e a coleção sequencial de Charizard PSA 1–10",
-      "kicker": "Influenciadores",
-      "format": "Pauta em apuração",
-      "status": "monitoring",
-      "sourceName": "Fonte primária pendente",
-      "sourceUrl": "https://www.instagram.com/thiago.nigro/",
-      "image": null,
-      "scheduleLabel": "Não publicar ainda",
-      "note": ""
+      "title": "Thiago Nigro e o Charizard TAG 10 de US$ 700 mil",
+      "kicker": "Famosos e Pokémon TCG",
+      "format": "Vídeo + 6 fotos · 7 telas",
+      "status": "published",
+      "sourceName": "Collectr",
+      "sourceUrl": "https://x.com/getcollectrapp/status/2043029448799207910",
+      "image": "/thiago-nigro-charizard-cover.jpg",
+      "scheduleLabel": "Publicado em 11/08",
+      "publishedUrl": "https://www.instagram.com/alertatcg/p/Db42Z0nnNvc/",
+      "tiktokUrl": "https://www.tiktok.com/@alertatcg/video/7672913810520296725",
+      "note": "Venda privada confirmada por US$ 700 mil em troca + dinheiro. A pauta nao representa apoio ao perfil nem garantia de valorizacao. Campanha pausada por solicitacao do usuario.",
+      "promotion": {
+        "status": "paused",
+        "pausedAt": "2026-08-11T14:59:31-04:00",
+        "submittedAt": "2026-08-11T13:47:00-04:00",
+        "dailyBudgetBRL": 20,
+        "durationDays": 1,
+        "estimatedTotalBRL": 22.76,
+        "estimatedImpressions": "2384-4692"
+      }
     },
     {
       "id": "neymar",
@@ -192,7 +465,7 @@
     {
       "group": "Mercado brasileiro",
       "names": "Copag · LigaPokemon · MeuDex · DeckLens",
-      "purpose": "Lançamentos locais e contexto de preço, sempre com data da consulta.",
+      "purpose": "Lançamentos locais e contexto editorial, sem venda direta no painel.",
       "level": "market"
     },
     {
@@ -205,8 +478,8 @@
   "monitoring": [
     {
       "name": "Thiago Nigro",
-      "subject": "Sequência de Charizard PSA 1–10",
-      "status": "Checar original"
+      "subject": "Charizard Shadowless TAG 10 de US$ 700 mil",
+      "status": "Confirmado e publicado"
     },
     {
       "name": "Neymar",
@@ -217,6 +490,11 @@
       "name": "Coringa",
       "subject": "Relação com Pokémon TCG",
       "status": "Aguardando fonte"
+    },
+    {
+      "name": "PokeRev",
+      "subject": "Rapidash holo #8/102 de Triumphant",
+      "status": "Trecho confirmado; aguardando Remix ou autorização"
     }
   ]
 }
