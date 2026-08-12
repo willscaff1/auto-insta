@@ -18,7 +18,9 @@ type Post = {
   sourceUrl: string;
   image: string | null;
   scheduleLabel: string;
+  publishedAt?: string;
   publishedUrl?: string;
+  tiktokUrl?: string;
   note: string;
 };
 
@@ -28,6 +30,7 @@ type DashboardData = {
   lastSync: string;
   stats: {
     published: number;
+    tiktokPublished?: number;
     ready: number;
     dailyTarget: number;
     tracked: number;
@@ -165,10 +168,15 @@ function QueueList({ posts }: { posts: Post[] }) {
             <span>{post.scheduleLabel}</span>
           </div>
           <div className="queue-actions">
-            {post.publishedUrl ? (
-              <a href={post.publishedUrl} target="_blank" rel="noreferrer">
-                Abrir post
-              </a>
+            {post.publishedUrl || post.tiktokUrl ? (
+              <div className="platform-links">
+                {post.publishedUrl && (
+                  <a href={post.publishedUrl} target="_blank" rel="noreferrer">Instagram</a>
+                )}
+                {post.tiktokUrl && (
+                  <a href={post.tiktokUrl} target="_blank" rel="noreferrer">TikTok</a>
+                )}
+              </div>
             ) : (
               <a href={post.sourceUrl} target="_blank" rel="noreferrer">
                 Ver fonte
@@ -213,7 +221,13 @@ export default function Home() {
     () => data.posts.filter((post) => filter === "todos" || post.status === filter),
     [data.posts, filter],
   );
-  const published = data.posts.find((post) => post.status === "published");
+  const published = data.posts
+    .filter((post) => post.status === "published")
+    .sort(
+      (first, second) =>
+        new Date(second.publishedAt ?? 0).getTime() -
+        new Date(first.publishedAt ?? 0).getTime(),
+    )[0];
   const ready = data.posts.filter((post) => post.status === "ready").slice(0, 2);
 
   return (
@@ -244,6 +258,14 @@ export default function Home() {
             rel="noreferrer"
           >
             Abrir Instagram
+          </a>
+          <a
+            className="tiktok-button"
+            href="https://www.tiktok.com/@alertatcg"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Abrir TikTok
           </a>
         </div>
       </header>
@@ -284,7 +306,7 @@ export default function Home() {
 
           <div className="source-rule">
             <span>Regra editorial</span>
-            <p>Preço só entra com moeda, data, condição e fonte verificável.</p>
+            <p>Valores aparecem só como contexto editorial; o painel não vende produtos.</p>
           </div>
         </aside>
 
@@ -324,6 +346,11 @@ export default function Home() {
                   <span>Publicados</span>
                   <strong>{String(data.stats.published).padStart(2, "0")}</strong>
                   <small>no ciclo atual</small>
+                </article>
+                <article className="metric-card metric-cyan">
+                  <span>TikTok no ar</span>
+                  <strong>{String(data.stats.tiktokPublished ?? 0).padStart(2, "0")}</strong>
+                  <small>espelhados e públicos</small>
                 </article>
                 <article className="metric-card metric-cyan">
                   <span>Criativos prontos</span>
@@ -432,16 +459,18 @@ export default function Home() {
                     <p className="published-kicker">{published.kicker}</p>
                     <h3>{published.title}</h3>
                     <p className="published-note">{published.note}</p>
-                    {published.publishedUrl && (
-                      <a
-                        className="primary-link"
-                        href={published.publishedUrl}
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        Ver publicação no Instagram
-                      </a>
-                    )}
+                    <div className="published-links">
+                      {published.publishedUrl && (
+                        <a className="primary-link" href={published.publishedUrl} target="_blank" rel="noreferrer">
+                          Ver no Instagram
+                        </a>
+                      )}
+                      {published.tiktokUrl && (
+                        <a className="primary-link secondary-link" href={published.tiktokUrl} target="_blank" rel="noreferrer">
+                          Ver no TikTok
+                        </a>
+                      )}
+                    </div>
                   </aside>
                 )}
               </section>
